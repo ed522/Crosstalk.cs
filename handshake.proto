@@ -1,0 +1,25 @@
+syntax = "proto3"
+
+enum Errno {
+    ERR_UNEXPECTED_MESSAGE = 0;
+    ERR_WRONG_PROTOCOL = 1;
+
+    ERR_UNSPECIFIED = 
+}
+
+message Error {
+    
+}
+
+message ClientHello {
+    uint32  protocolVersion: 1;
+    fixed64 random1: 2;
+    fixed64 random2: 3;
+    fixed64 random3: 4;
+    fixed64 random4: 5;
+    bytes   fingerprint: 6;
+}
+
+message ServerHello {
+    uint32  
+}

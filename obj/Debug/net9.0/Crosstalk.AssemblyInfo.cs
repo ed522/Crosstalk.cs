@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Crosstalk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+042bc88ba8b610c17d22f95689c7267970c186fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Crosstalk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Crosstalk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
