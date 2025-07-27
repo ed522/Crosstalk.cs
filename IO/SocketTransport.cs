@@ -36,14 +36,20 @@ class SocketTransport(Socket socket) : Transport(null) {
 
     public override void Send(byte[] packet, short id) {
         byte[] b = BitConverter.GetBytes(packet.Length);
-        if (BitConverter.IsLittleEndian) b.Reverse();
+        if (BitConverter.IsLittleEndian)
+        {
+            b.Reverse();
+        }
         socket.Send(b);
         socket.Send(packet);
     }
 
     public override async Task SendAsync(byte[] packet, short id) {
         byte[] b = BitConverter.GetBytes(packet.Length);
-        if (BitConverter.IsLittleEndian) b.Reverse();
+        if (BitConverter.IsLittleEndian)
+        {
+            b.Reverse();
+        }
         await socket.SendAsync(b);
         await socket.SendAsync(packet);
     }

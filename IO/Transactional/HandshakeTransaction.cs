@@ -1,4 +1,6 @@
-namespace Crosstalk.IO.Trans;
+namespace Crosstalk.IO.Transactional;
+
+using Crosstalk.IO;
 
 class HandshakeTransaction : ITransaction
 {

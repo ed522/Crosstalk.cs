@@ -1,4 +1,5 @@
-namespace Crosstalk.IO {
+namespace Crosstalk.IO
+{
     interface ITransaction {
 
         /// <summary>

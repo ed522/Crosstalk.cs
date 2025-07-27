@@ -7,7 +7,7 @@ namespace Crosstalk.IO;
 class TransactionalTransport : Transport
 {
 
-    private readonly struct ThreadArguments
+    private sealed record ThreadArguments
     {
         public readonly AutoResetEvent messageTrigger;
         public readonly CancellationToken token;

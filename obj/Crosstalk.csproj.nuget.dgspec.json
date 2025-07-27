@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/linux/Code/github/Crosstalk.cs/Crosstalk/Crosstalk.csproj": {}
+    "/home/linux/Documents/Code/github/Crosstalk.cs/Crosstalk.csproj": {}
   },
   "projects": {
-    "/home/linux/Code/github/Crosstalk.cs/Crosstalk/Crosstalk.csproj": {
+    "/home/linux/Documents/Code/github/Crosstalk.cs/Crosstalk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/linux/Code/github/Crosstalk.cs/Crosstalk/Crosstalk.csproj",
+        "projectUniqueName": "/home/linux/Documents/Code/github/Crosstalk.cs/Crosstalk.csproj",
         "projectName": "Crosstalk",
-        "projectPath": "/home/linux/Code/github/Crosstalk.cs/Crosstalk/Crosstalk.csproj",
+        "projectPath": "/home/linux/Documents/Code/github/Crosstalk.cs/Crosstalk.csproj",
         "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/home/linux/Code/github/Crosstalk.cs/Crosstalk/obj/",
+        "outputPath": "/home/linux/Documents/Code/github/Crosstalk.cs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,7 @@
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/ed522/index.json": {}
         },
@@ -40,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

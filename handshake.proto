@@ -4,20 +4,21 @@ enum Errno {
     ERR_UNEXPECTED_MESSAGE = 0;
     ERR_WRONG_PROTOCOL = 1;
 
-    ERR_UNSPECIFIED = 
+    ERR_UNSPECIFIED = 999;
 }
 
 message Error {
-    
+    optional Errno   reason = 1;
+    optional int     messageIndexAtFault = 2;
 }
 
 message ClientHello {
-    uint32  protocolVersion: 1;
-    fixed64 random1: 2;
-    fixed64 random2: 3;
-    fixed64 random3: 4;
-    fixed64 random4: 5;
-    bytes   fingerprint: 6;
+    optional uint32  protocolVersion = 1;
+    optional fixed64 random1 = 2;
+    optional fixed64 random2 = 3;
+    optional fixed64 random3 = 4;
+    optional fixed64 random4 = 5;
+    optional bytes   certPrint = 6;
 }
 
 message ServerHello {
