@@ -13,5 +13,17 @@ class HandshakeTransaction : ITransaction
         }
     }
 
+    public void Start(ushort id, TransactionalTransport context, CancellationToken token)
+    {
+
+        token.ThrowIfCancellationRequested();
+        
+
+    }
+
+    public void Stop()
+    {
+
+    }
 
 }

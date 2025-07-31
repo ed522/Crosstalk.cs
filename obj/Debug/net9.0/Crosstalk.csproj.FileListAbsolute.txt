@@ -1,4 +1,0 @@
-/home/linux/Code/github/Crosstalk.cs/Crosstalk/obj/Debug/net9.0/Crosstalk.GeneratedMSBuildEditorConfig.editorconfig
-/home/linux/Code/github/Crosstalk.cs/Crosstalk/obj/Debug/net9.0/Crosstalk.AssemblyInfoInputs.cache
-/home/linux/Code/github/Crosstalk.cs/Crosstalk/obj/Debug/net9.0/Crosstalk.AssemblyInfo.cs
-/home/linux/Code/github/Crosstalk.cs/Crosstalk/obj/Debug/net9.0/Crosstalk.csproj.CoreCompileInputs.cache

@@ -1,10 +1,11 @@
 ﻿using System.Net.Sockets;
 
-namespace Crosstalk.IO
+namespace Crosstalk.IO;
+
+public abstract class Transport(Transport? basis) : IDisposable
 {
-    public abstract class Transport(Transport? basis)
-    {
-        protected virtual Transport? TransportBase { get; init; } = basis;
+    protected virtual Transport? TransportBase { get; init; } = basis;
+    protected bool _disposed = false;
 
         public abstract void Send(byte[] packet, short id);
         public abstract byte[] Receive();
@@ -19,7 +20,21 @@ namespace Crosstalk.IO
             await this.SendAsync(packet, 0);
         }
 
-        public abstract void Close();
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+    ~Transport() => Dispose(false);
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (Interlocked.Exchange<bool>(ref _disposed, true)) return;
+        if (disposing)
+        {
+            // nothing to do here
+        }
 
     }
+
 }
