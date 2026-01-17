@@ -29,11 +29,19 @@ public abstract class Transport(Transport? basis) : IDisposable
 
     protected virtual void Dispose(bool disposing)
     {
-        if (Interlocked.Exchange<bool>(ref _disposed, true)) return;
-        if (disposing)
+        if (Interlocked.Exchange<bool>(ref _disposed, true))
         {
-            // nothing to do here
+            throw new ObjectDisposedException(this.GetType().ToString());
         }
+
+        // for reference:
+
+        // if (disposing)
+        // {
+        //     // managed stuff goes here
+        // }
+
+        // // unmanaged
 
     }
 
