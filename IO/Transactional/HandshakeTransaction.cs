@@ -12,6 +12,14 @@ class HandshakeTransaction : ITransaction
             return new HandshakeTransaction();
         }
     }
+    
+    private static void CancelIfRequested(ushort id, TransactionalTransport context, CancellationToken token)
+    {
+        if (token.IsCancellationRequested)
+        {
+            // send a cancellation notification
+        }
+    }
 
     public void Start(ushort id, TransactionalTransport context, CancellationToken token)
     {

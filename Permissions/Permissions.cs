@@ -62,7 +62,7 @@ public class PermissionTree
             else
             {
                 TrieNode newChild = new([], null);
-                currentNode.Children.Add(component, newChild);
+                currentNode.Children!.Add(component, newChild);
                 currentNode = newChild;
             }
 

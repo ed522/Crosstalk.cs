@@ -1,6 +1,4 @@
 using System.Collections.Concurrent;
-using System.ComponentModel;
-using System.Net.Sockets;
 
 namespace Crosstalk.IO;
 
@@ -67,8 +65,7 @@ class TransactionalTransport : Transport
     }
     public override Task SendAsync(byte[] packet, short id)
     {
-        if (!ActiveTransactions.ContainsKey(id)) throw new ArgumentOutOfRangeException(nameof(id));
-        else sendQueue.Enqueue((id, packet));
+        this.Send(packet, id);
         return Task.CompletedTask;
     }
     public override byte[] Receive()
@@ -80,10 +77,15 @@ class TransactionalTransport : Transport
         throw new NotImplementedException();
     }
 
-    public override void Close()
+    protected override void Dispose(bool disposing)
     {
-        this.tokenSource.Cancel();
-        this.tokenSource.Dispose();
+        base.Dispose(disposing);
+
+        if (disposing)
+        {
+            this.tokenSource.Cancel();
+        }
+        
     }
 
     ~TransactionalTransport()
